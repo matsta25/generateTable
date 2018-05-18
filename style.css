@@ -12,6 +12,9 @@ table, td, th {
   tbody tr {
     border: 1px solid #ddd; }
     
+  tbody td {
+    width: 20%; }
+      
   
   tfoot {
     border: 1px solid #ddd; }
