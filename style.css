@@ -1,0 +1,58 @@
+table, td, th {
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-size: 12px; }
+  
+  thead {
+    color: white;
+    background-color: #494430;
+    cursor: pointer; }
+  
+  tbody tr {
+    border: 1px solid #ddd; }
+    
+  
+  tfoot {
+    border: 1px solid #ddd; }
+    
+    tfoot tr {
+      width: 100%; }
+    tfoot td #search{
+      text-align: left;
+      float: left;
+    }
+    
+    tfoot td {
+      text-align: right; }
+    tfoot i {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      cursor: pointer;
+      display: inline-block;
+      padding: 3px;
+      margin-left: 10px; }
+    tfoot .right {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg); }
+    tfoot .left {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg); }
+    tfoot select {
+      margin: 0 10px;
+      background-color: white;
+      border: none;
+      letter-spacing: 7px;
+      cursor: pointer; }
+    tfoot span {
+      margin: 0 5px; }      
+  
+  table {
+    border-collapse: collapse;
+    width: 100%; }
+  
+  th, td {
+    padding: 15px; }
+  
+  /*# sourceMappingURL=style.css.map */
+  
