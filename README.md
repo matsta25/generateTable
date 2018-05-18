@@ -1,5 +1,7 @@
 # generateTable
 
+>Table, pageable, filters, search, data generate, browser local storage.
+
 DEMO GIF:
 
 <img src="https://github.com/matsta25/generateTable/blob/master/generateTable_demogif.gif" alt="alt tag" style="max-width:100%;">
