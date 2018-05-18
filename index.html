@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Table Component</title>
+    <title>Generate Table</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -26,7 +26,7 @@
             </thead>
 
             <tbody>
-                <template  v-if="search != ''">
+                <template v-if="search != ''">
                     <template v-for="data,index in filteredList">
                         <tr>
                             <td v-for="(val,key) in data">
@@ -58,20 +58,20 @@
                 <tr>
                     <td v-bind:colspan="footerLenght">
 
-                        <input id="search" type="text" v-model="search" placeholder="Search..."> 
-                        <template  v-if="search == ''">
-                        Rows per page:
-                        <select v-on:click="selectedUpdate" v-model="selected">
-                            <option v-for="option in options" v-bind:value="option.value">
-                                {{ option.value }}
-                            </option>
-                        </select>
+                        <input id="search" type="text" v-model="search" placeholder="Search...">
+                        <template v-if="search == ''">
+                            Rows per page:
+                            <select v-on:click="selectedUpdate" v-model="selected">
+                                <option v-for="option in options" v-bind:value="option.value">
+                                    {{ option.value }}
+                                </option>
+                            </select>
 
-                        <span>{{startRow+1}} - {{endRow}} of {{dataTableLenght}}</span>
+                            <span>{{startRow+1}} - {{endRow}} of {{dataTableLenght}}</span>
 
-                        <i v-on:click="prevPage()" class="arrow left"></i>
-                        <i v-on:click="nextPage()" class="arrow right"></i>
-                    </template>
+                            <i v-on:click="prevPage()" class="arrow left"></i>
+                            <i v-on:click="nextPage()" class="arrow right"></i>
+                        </template>
                     </td>
                 </tr>
             </tfoot>

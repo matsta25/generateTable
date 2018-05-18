@@ -25,15 +25,11 @@ cd generateTable
 
 open index.html in your browser
 
-and go to http://localhost/
+and go to http://localhost
 
 ## Deployment
 
-<b>Check it out on HerokuApp :fire:<a href="https://generateTable.herokuapp.com/">HERE</a></b>:fire:.
-
-or:
-
-<b>Check it out on GitHub Pages :fire:<a href="https://matsta25.github.io/generateTable/">HERE</a></b>:fire:.
+<b>Check it out :fire:<a href="https://matsta25.github.io/generateTable/">HERE</a></b>:fire:.
 
 
 ## Built With

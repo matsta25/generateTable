@@ -169,16 +169,16 @@ var vm = new Vue({
 
                 var peselUnikat = true;
 
-                for(var x = 0 ; x < j -1 ; x++){
-                    if(pesel == this.tableData[x].four){
+                for (var x = 0; x < j - 1; x++) {
+                    if (pesel == this.tableData[x].four) {
                         peselUnikat = false;
                         console.log(pesel + '==' + this.tableData[x].four);
-                    }else{
+                    } else {
                         console.log('unikat');
                     }
-                } 
+                }
 
-                if(peselUnikat){
+                if (peselUnikat) {
                     this.tableData.push({
                         one: randomName,
                         two: randomSurname,
@@ -186,11 +186,11 @@ var vm = new Vue({
                         four: pesel,
                         five: done
                     });
-                }else{
+                } else {
                     j--;
                 }
 
-                
+
             }
             // location.reload();
             console.log('ref');
@@ -203,49 +203,49 @@ var vm = new Vue({
                 var x, y;
                 if (this.currentSort == this.tableHeader[0]) {
                     x = a.one;
-                    y = b.one 
+                    y = b.one
                 } else if (this.currentSort == this.tableHeader[1]) {
                     x = a.two;
-                    y = b.two; 
+                    y = b.two;
                 } else if (this.currentSort == this.tableHeader[2]) {
-                    x = a.four.substr(0,6);
-                    y = b.four.substr(0,6);
+                    x = a.four.substr(0, 6);
+                    y = b.four.substr(0, 6);
                 } else if (this.currentSort == this.tableHeader[3]) {
                     x = a.four;
                     y = b.four;
-                }  if (this.currentSort == this.tableHeader[4]) {
+                } if (this.currentSort == this.tableHeader[4]) {
                     x = a.five;
                     y = b.five;
                 }
-                    var modifier = 1;
-                    if (this.currentSortDir === 'desc') {
-                        modifier = -1;
-                    }
-                    if (x < y) {
-                        return -1 * modifier;
-                    }
-                    if (x > y) {
-                        return 1 * modifier;
-                    }
+                var modifier = 1;
+                if (this.currentSortDir === 'desc') {
+                    modifier = -1;
+                }
+                if (x < y) {
+                    return -1 * modifier;
+                }
+                if (x > y) {
+                    return 1 * modifier;
+                }
                 return 0;
             });
         }
-    ,filteredList() {
-        return this.tableData.filter(row => {
-            if(row.one.toLowerCase().includes(this.search.toLowerCase())){
-                return row.one.toLowerCase().includes(this.search.toLowerCase())
-            }
-            if(row.two.toLowerCase().includes(this.search.toLowerCase())){
-                return row.two.toLowerCase().includes(this.search.toLowerCase())
-            }
-            if(row.three.toLowerCase().includes(this.search.toLowerCase())){
-                return row.three.toLowerCase().includes(this.search.toLowerCase())
-            }
-            if(row.four.toLowerCase().includes(this.search.toLowerCase())){
-                return row.four.toLowerCase().includes(this.search.toLowerCase())
-            }
-        })
-      }
+        , filteredList() {
+            return this.tableData.filter(row => {
+                if (row.one.toLowerCase().includes(this.search.toLowerCase())) {
+                    return row.one.toLowerCase().includes(this.search.toLowerCase())
+                }
+                if (row.two.toLowerCase().includes(this.search.toLowerCase())) {
+                    return row.two.toLowerCase().includes(this.search.toLowerCase())
+                }
+                if (row.three.toLowerCase().includes(this.search.toLowerCase())) {
+                    return row.three.toLowerCase().includes(this.search.toLowerCase())
+                }
+                if (row.four.toLowerCase().includes(this.search.toLowerCase())) {
+                    return row.four.toLowerCase().includes(this.search.toLowerCase())
+                }
+            })
+        }
     },
     watch: {
         tableData: {
