@@ -4,7 +4,8 @@ DEMO GIF:
 
 <img src="https://github.com/matsta25/generateTable/blob/master/generateTable_demogif.gif" alt="alt tag" style="max-width:100%;">
 
-This is pageable table with filters, search, data generate and browser local storage.
+This is pageable table with filters, search and data generate.
+It uses browser local storage.
 
 ### Run
 
@@ -28,7 +29,12 @@ and go to http://localhost/
 
 ## Deployment
 
-<b>Check it out :fire:<a href="https://generateTable.herokuapp.com/">HERE</a></b>:fire:.
+<b>Check it out on HerokuApp :fire:<a href="https://generateTable.herokuapp.com/">HERE</a></b>:fire:.
+
+or:
+
+<b>Check it out on GitHub Pages :fire:<a href="https://matsta25.github.io/generateTable/">HERE</a></b>:fire:.
+
 
 ## Built With
 
