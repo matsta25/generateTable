@@ -23,17 +23,28 @@ go to 'generateTable':
 cd generateTable
 ```
 
-open index.html in your browser
+and just open index.html in your browser using desktop file manager or type:
 
-and go to http://localhost
+    If you using chrome or firefox you may type:
+
+        chrome:
+        ```
+        google-chrome index.html
+        ```
+
+        firefox:
+        ```
+        firefox index.html
+        ```
+
 
 ## Deployment
 
 <b>Check it out :fire:<a href="https://matsta25.github.io/generateTable/">HERE</a></b>:fire:.
 
-
 ## Built With
 
+Framework:
 * [Vue-js](https://vuejs.org/)
 
 ## Authors
