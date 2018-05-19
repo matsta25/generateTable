@@ -82,7 +82,7 @@
         <form v-on:submit="addData">
             <input type="text" v-model="inputValOne" />
             <input type="text" v-model="inputValTwo" />
-            <input type="date" v-model="inputValThree" />
+            <input type="date" v-model="inputValThree" v-on:change="preInputValFour()"  />
             <input type="text" v-model="inputValFour" />
             <input type="checkbox" v-model="inputValFive" />
 

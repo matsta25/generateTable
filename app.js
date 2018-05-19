@@ -192,9 +192,16 @@ var vm = new Vue({
 
 
             }
-            // location.reload();
+             location.reload();
             console.log('ref');
 
+        },
+        preInputValFour: function () {
+            var prePeselFormated = '';
+            prePeselFormated += this.inputValThree.substr(2,2);
+            prePeselFormated += this.inputValThree.substr(5,2);
+            prePeselFormated += this.inputValThree.substr(8,2);
+            this.inputValFour = prePeselFormated;
         }
     },
     computed: {
