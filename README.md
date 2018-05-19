@@ -13,7 +13,7 @@ It uses browser local storage.
 
 To local run example: 
 
-Download zip from here or install git and clone repo:
+Download zip from here or install git and then clone repo:
 
 ```
 git clone https://github.com/matsta25/generateTable.git
@@ -27,18 +27,17 @@ cd generateTable
 
 and just open index.html in your browser using desktop file manager or type:
 
-    If you using chrome or firefox you may type:
+If you using chrome or firefox you may type:
 
-        chrome:
-        ```
-        google-chrome index.html
-        ```
+chrome:
+```
+google-chrome index.html
+```
 
-        firefox:
-        ```
-        firefox index.html
-        ```
-
+firefox:
+```
+firefox index.html
+```
 
 ## Deployment
 
@@ -53,11 +52,11 @@ Framework:
 
 * **Mateusz Stańczak** - [matsta25](https://github.com/matsta25)
 
-See also the list of [contributors](https://github.com/matsta25/generateTable/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/matsta25/generateTable/graphs/contributors) who participated in this project (maybe in future).
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/matsta25/generateTable/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/matsta25/generateTable/blob/master/LICENSE) file for details.
 
 ## Acknowledgments
 

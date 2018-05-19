@@ -2,7 +2,8 @@ table, td, th {
     text-align: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: lighter;
-    font-size: 12px; }
+    font-size: 12px; 
+    margin-bottom: 10px;}
   
   thead {
     color: white;
@@ -17,14 +18,11 @@ table, td, th {
       
   tfoot {
     border: 1px solid #ddd; }
-    
     tfoot tr {
       width: 100%; }
     tfoot td #search{
       text-align: left;
-      float: left;
-    }
-    
+      float: left;}
     tfoot td {
       text-align: right; }
     tfoot i {
@@ -56,5 +54,5 @@ table, td, th {
   th, td {
     padding: 15px; }
   
-  /*# sourceMappingURL=style.css.map */
+  /*# sourceMappingURL=style.css.map && SASS */
   

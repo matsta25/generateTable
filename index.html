@@ -59,6 +59,7 @@
                     <td v-bind:colspan="footerLenght">
 
                         <input id="search" type="text" v-model="search" placeholder="Search...">
+
                         <template v-if="search == ''">
                             Rows per page:
                             <select v-on:click="selectedUpdate" v-model="selected">
@@ -72,28 +73,41 @@
                             <i v-on:click="prevPage()" class="arrow left"></i>
                             <i v-on:click="nextPage()" class="arrow right"></i>
                         </template>
+
                     </td>
                 </tr>
             </tfoot>
+
         </table>
 
-        <hr>
+        <!-- 
+            End of table - here.
 
-        <form v-on:submit="addData">
-            <input type="text" v-model="inputValOne" />
-            <input type="text" v-model="inputValTwo" />
-            <input type="date" v-model="inputValThree" v-on:change="preInputValFour()"  />
-            <input type="text" v-model="inputValFour" />
-            <input type="checkbox" v-model="inputValFive" />
+            Below just dev extras for testing.
+        -->
 
-            <button type="submit">Add</button>
-        </form>
+        <button v-on:click="extrasPanel = !extrasPanel">Dev Extras Panel</button>
 
-        <hr>
+        <template v-if="extrasPanel == true">
+            <hr>
 
-        <button v-on:click="generateData()">Generate 200 Rows</button>
-        <hr>
+            <form v-on:submit="addData">
+                <input type="text" v-model="inputValOne" placeholder="Name" />
+                <input type="text" v-model="inputValTwo" placeholder="Surname" />
+                <input type="date" v-model="inputValThree" v-on:change="preInputValFour()" />
+                <input type="text" v-model="inputValFour" placeholder="Pesel" />
+                <input type="checkbox" v-model="inputValFive" />
 
+                <button type="submit">Add</button>
+            </form>
+
+            <hr>
+
+            <button v-on:click="generateData()">Generate 200 Rows</button>
+            <button v-on:click="removeAllData()">Clear table</button>
+            
+            <hr>
+        </template>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

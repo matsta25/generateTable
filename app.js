@@ -46,8 +46,8 @@ var vm = new Vue({
         nameLenght: 5,
         surnameLenght: 7,
         generateDataLenght: 200,
-        search: ''
-
+        search: '',
+        extrasPanel: false
     },
     created: function () {
         this.dataTableLenght = this.tableData.length;
@@ -72,17 +72,16 @@ var vm = new Vue({
             this.inputValThree = '';
             this.inputValFour = '';
             this.inputValFive = false;
+            location.reload();
         },
         toggleCheckbox: function (data, index) {
             this.tableData[index].five = !this.tableData[index].five;
             tableStorage.del();
             tableStorage.save(this.tableData);
         },
-
         numPages: function () {
             return Math.ceil(this.tableData.length / this.selected);
         },
-
         prevPage: function () {
             if (this.currentPage > 1) {
                 this.currentPage--;
@@ -97,7 +96,6 @@ var vm = new Vue({
                 this.endRow = this.currentPage * this.selected;
                 if (this.endRow > this.dataTableLenght) {
                     this.endRow = this.tableData.length;
-
                 }
             }
         },
@@ -110,7 +108,11 @@ var vm = new Vue({
                 this.currentSortDir = this.currentSortDir === 'asc' ? 'desc' : 'asc';
             }
             this.currentSort = s;
-            console.log(s);
+            if (this.currentPage > 1) {
+                this.currentPage = 1;
+                this.startRow = 0;
+                this.endRow = this.currentPage * this.selected;
+            }
         },
         generateData: function () {
             var chars = "abcdefghijklmnoprstuwz";
@@ -165,16 +167,11 @@ var vm = new Vue({
 
                 var done = Math.random() >= 0.5;
 
-                // console.log(randomName + ' ' + randomSurname + ' ' + randomBirthdate + ' ' + pesel + ' '+ done);
-
                 var peselUnikat = true;
 
                 for (var x = 0; x < j - 1; x++) {
                     if (pesel == this.tableData[x].four) {
                         peselUnikat = false;
-                        console.log(pesel + '==' + this.tableData[x].four);
-                    } else {
-                        console.log('unikat');
                     }
                 }
 
@@ -192,16 +189,18 @@ var vm = new Vue({
 
 
             }
-             location.reload();
-            console.log('ref');
-
+            location.reload();
         },
         preInputValFour: function () {
             var prePeselFormated = '';
-            prePeselFormated += this.inputValThree.substr(2,2);
-            prePeselFormated += this.inputValThree.substr(5,2);
-            prePeselFormated += this.inputValThree.substr(8,2);
+            prePeselFormated += this.inputValThree.substr(2, 2);
+            prePeselFormated += this.inputValThree.substr(5, 2);
+            prePeselFormated += this.inputValThree.substr(8, 2);
             this.inputValFour = prePeselFormated;
+        },
+        removeAllData: function () {
+            tableStorage.del();
+            location.reload();
         }
     },
     computed: {
@@ -236,8 +235,8 @@ var vm = new Vue({
                 }
                 return 0;
             });
-        }
-        , filteredList() {
+        },
+        filteredList() {
             return this.tableData.filter(row => {
                 if (row.one.toLowerCase().includes(this.search.toLowerCase())) {
                     return row.one.toLowerCase().includes(this.search.toLowerCase())
