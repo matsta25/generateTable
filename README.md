@@ -11,7 +11,7 @@ It uses browser local storage.
 
 ### Run
 
-To local run example: 
+To local run follow this example: 
 
 Download zip from here or install git and then clone repo:
 
@@ -25,9 +25,9 @@ go to 'generateTable':
 cd generateTable
 ```
 
-and just open index.html in your browser using desktop file manager or type:
+and just open index.html in your browser using desktop file manager or:
 
-If you using chrome or firefox you may type:
+if you using chrome or firefox you may type:
 
 chrome:
 ```
@@ -38,6 +38,8 @@ firefox:
 ```
 firefox index.html
 ```
+
+from terminal.
 
 ## Deployment
 
